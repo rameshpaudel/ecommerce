@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="{{ config('app.locale') }}">
+=======
+<html lang="en">
+>>>>>>> 3cda8146d47e0fe5a8de15cf8c4b675c5ac54931
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +12,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<<<<<<< HEAD
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
@@ -18,10 +23,28 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
+=======
+    <title>{{ config('app.name', 'CMS') }}</title>
+
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/themify-icons.css">
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+    {{-- <link href="/frontend/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> --}}
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+>>>>>>> 3cda8146d47e0fe5a8de15cf8c4b675c5ac54931
     </script>
 </head>
 <body>
     <div id="app">
+<<<<<<< HEAD
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -85,3 +108,35 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
+=======
+
+        <header class="page-header">
+            <site-menu></site-menu>
+        </header>
+
+        @yield('content')
+
+        <footer class="page-footer">
+           
+        </footer>
+
+        
+    </div>
+
+    <!-- Scripts -->
+    
+ <!--   <script src="/frontend/js/jquery.mixitup.js"></script>
+ <script src="/frontend/js/pace.js"></script>
+ <script src="/frontend/js/textillate.js"></script>
+ <script src="/frontend/js/animateSlider.js"></script>
+ <script src="/frontend/js/modernizr.js"></script>  -->
+{{--    <script src="/frontend/js/new.js" async defer></script>
+   <script src="/frontend/js/custom.js" async defer></script> --> --}}
+
+    <script src="/js/app.js"></script> 
+   {{-- <script src="/frontend/js/components.js" async defer></script> --}}
+</body>
+</html>
+ 
+
+>>>>>>> 3cda8146d47e0fe5a8de15cf8c4b675c5ac54931

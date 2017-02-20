@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+@section('content')
 
+<<<<<<< HEAD
         <title>Laravel</title>
         <script>
             window.Laravel = {!! json_encode([
@@ -23,3 +20,8 @@
     <script src="/js/app.js"></script>
     </body>
 </html>
+=======
+           <router-view></router-view>
+
+@stop
+>>>>>>> 3cda8146d47e0fe5a8de15cf8c4b675c5ac54931
