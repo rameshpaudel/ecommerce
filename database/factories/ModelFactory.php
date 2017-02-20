@@ -22,3 +22,22 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Product::class, function (Faker\Generator $faker) {
+
+    return [
+        'title' => $faker->name,
+		'brand' => $faker->name,
+		'type' => $faker->name,
+		'price' => random_int(200, 9000),
+		'in_stock' => 1,
+		'quantity' => random_int(0, 100),
+		'colors_available' => 'red',
+		'description' => $faker->paragraph(3),
+		'short_description' => $faker->words(4,true),
+		'category_id' => 1,
+		'status' => 1,
+		'user_id' => 1
+    ];
+});
+

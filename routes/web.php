@@ -21,6 +21,11 @@ Route::get('/home', 'HomeController@index');
 
 \TalvBansal\MediaManager\Routes\MediaRoutes::get();
 
+# routing for vue
 Route::get('{vue_capture}?', function () {
     return view('welcome');
+});
+
+Route::get('/product',function(){
+	return App\Product::all();
 });

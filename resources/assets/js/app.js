@@ -1,5 +1,8 @@
 
 window.Vue = require('vue');
+
+import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
 import VueRouter from 'vue-router';
 
 /**
@@ -8,12 +11,12 @@ import VueRouter from 'vue-router';
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios');
-
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest'
 };
+
+window.axios = require('axios');
 
 
 Vue.use(VueRouter);
@@ -22,15 +25,13 @@ window.$ = window.jQuery = require('jquery');
 
 require('vue-resource');
 
-import ElementUI from 'element-ui'
 require('element-ui');
 
 
 
-import locale from 'element-ui/lib/locale/lang/en'
 
 Vue.use(ElementUI, { locale })
-Vue.use(ElementUI, { locale })
+
 
 /**
  * First we will load all of this project's JavaScript dependencies which
